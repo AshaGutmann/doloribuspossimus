@@ -1,0 +1,32 @@
+{
+  "name": "manual-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mercurius basic example using only included types",
+  "license": "MIT",
+  "author": "PabloSz",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsup-node --watch --onSuccess \"cross-env NODE_ENV=development node dist/index.js\" src/index.ts",
+    "prepare": "tsc",
+    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "test": "cross-env NODE_ENV=test tap --node-arg=--require=esbuild-register"
+  },
+  "dependencies": {
+    "fastify": "^3.18.1",
+    "graphql": "^15.5.1",
+    "mercurius": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^15.14.1",
+    "@types/tap": "^15.0.5",
+    "cross-env": "^7.0.3",
+    "esbuild-register": "^2.6.0",
+    "graphql-tag": "^2.12.5",
+    "mercurius-integration-testing": "^3.1.3",
+    "tap": "^15.0.9",
+    "tsup": "^4.12.5",
+    "typescript": "^4.3.5"
+  }
+}

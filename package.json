@@ -1,0 +1,30 @@
+{
+  "name": "doloribuspossimus",
+  "version": "1.0.0",
+  "description": "All the examples are available in the [examples folder](./examples/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AshaGutmann/doloribuspossimus.git"
+  },
+  "license": "MIT",
+  "author": "BradlyOrn",
+  "scripts": {
+    "prepare": "husky install",
+    "test": "pnpm test --recursive --no-bail --stream"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "husky": "^7.0.1",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/node": "^15.14.1"
+    }
+  }
+}
